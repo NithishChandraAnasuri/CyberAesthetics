@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  cursor: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgb(100, 104, 104);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(102, 104, 104), 0 0 20px rgba(155, 157, 157, 0.468);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Navbar */
+.navbar {
+  width: 30%;
+  height: 100px;
+  position: relative;
+}
+
+.navbar p {
+  text-align: center;
+  font-size: 3em;
+  position: relative;
+  top: 20px;
+  color: white;
+}
+
+/* Contain Section */
+.contain {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  left: 35%;
+  top: -70px;
+}
+
+/* Main Image Section */
+.main {
+  width: 200%;
+  height: 90vh;
+  position: relative;
+  top: 10px;
+  border-radius: 1rem;
+  background-image: url(/1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Minimap */
+.minimap {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.indicator {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(251, 251, 251);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.maps img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 5px;
+  padding: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.maps img:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar p {
+    font-size: 2em;
+  }
+
+  .contain {
+    width: 150px;
+    height: 200px;
+    left: 20%;
+    top: -50px;
+  }
+
+  .main {
+    width: 100%;
+    height: 600px !important;
+    background-size: contain;
+    background-position: top center;
+  }
+
+  .minimap {
+    width: 40px;
+    right: 10px;
+  }
+
+  .maps img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .indicator {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablet Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar p {
+    font-size: 2.5em;
+  }
+
+  .contain {
+    width: 180px;
+    height: 230px;
+    left: 30%;
+    top: -60px;
+  }
+
+  .main {
+    width: 150%;
+    height: 85vh;
+    background-size: cover;
+  }
+
+  .minimap {
+    width: 45px;
+    right: 15px;
+  }
+
+  .maps img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .indicator {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Desktop Devices */
+@media (min-width: 1025px) {
+  .navbar {
+    width: 30%;
+    height: 100px;
+  }
+
+  .navbar p {
+    font-size: 3em;
+  }
+
+  .contain {
+    width: 200px;
+    height: 250px;
+    left: 35%;
+    top: -70px;
+  }
+
+  .main {
+    width: 200%;
+    height: 90vh;
+    background-size: cover;
+  }
+
+  .minimap {
+    width: 50px;
+    right: 20px;
+  }
+
+  .maps img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .indicator {
+    width: 50px;
+    height: 50px;
+  }
+}
